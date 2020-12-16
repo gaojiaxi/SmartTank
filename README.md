@@ -12,7 +12,7 @@ The source code are in BackPropagation.java and BPLearning.java. In order to obt
 ###System Architecture
 I define the set of states as a four dimension vector. The four dimensions of state vector are **heading, location,bearing and distance** respectively. Heading represents the heading direction of my robot which is discretized to 4 values: up, right, down, left, as shown in Figure 1. Location represents the location of my robot in the battle field which is discretized to 9 areas as shown in Figure 2. Four corners are 100×100 pixels square areas. Bearing represents the angle of the opponent robot relative to the heading of my robot which is also discretized to 4 value similar to heading. Distance represents the distance between my robot and the opponent robot which is discretized to 5 values: very near(0-100 pixels), near(100-200 pixels), normal(200-300 pixels), far(300-400 pixels), very far( greater than 500 pixels).
 
-![](https://github.com/gaojiaxi/SmartEvent/tree/master/demoPictures/highLevelStructure.jpg)
+![](https://github.com/gaojiaxi/SmartTank/blob/master/demoPictures/heading_location.jpg)
 
 
 I define the set of actions includes three actions: **gravitation movement, anti-gravitation movement and pendulum movement**. I do not use any fire action, so the robot need to choose one of the three actions to dodge the enemy's bullet to win. In terms of immediate reward, it is calculated as the difference between energy change of my robot and that of the opponent robot.
