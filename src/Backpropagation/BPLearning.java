@@ -4,7 +4,7 @@ public class BPLearning {
 	public static void main(String[] args) {
 		int argNumInputs = 2;
 		int argNumHidden = 4;
-		double argLearningRate = 0.2;
+		double argLearningRate = 0.02;
 		double argMomentumTerm = 0.9;
 		double argA = -1;
 		double argB = 1;
