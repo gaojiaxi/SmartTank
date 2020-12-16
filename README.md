@@ -52,49 +52,15 @@ For this part, I train my robot 1000 rounds of battles with immediate reward and
 ![](https://github.com/gaojiaxi/SmartTank/blob/master/demoPictures/figure8.jpg)
 ![](https://github.com/gaojiaxi/SmartTank/blob/master/demoPictures/figure9.jpg)
 
-## Installation
-Clone the GitHub repository and then import Smart-Event.war into your eclipse.
+### Comparison of training performance with different values of ε
 
-```
-git clone https://github.com/gaojiaxi/SmartEvent.git
-```
-In order to import the WAR file into Eclipse JEE, click on File -> Import. Select Web -> WAR File.
-* **WAR** file: Provide the full path of the WAR file on your computer.
-* **Web project**: This will be auto-filled based on the WAR file name. You may change it depends on your own settings.
-* **Target runtime**: You will need to select “Apache Tomcat 9.0”. The first time you import a WAR
-file (or create new “Dynamic Web Project”) you will need to declare the new runtime environment. Do this by clicking on “New” and filling in the form as follows:
-	* **Apache Tomat v9.0**, then click “Next”
-	* Provide the Tomcat installation directory by giving the full pathname of the directory
-containing your unzipped version of Tomcat 9.0.
-	* Click “Finished”.
-* Click "Finished".
+For this part, I adopt 4 different values of ε(0.1, 0.05, 0.01, 0) to compare their learning performance. From Figure 10, we can see that all of them have very good learning performance in terms of surviving rate of my robot during test process and the smaller ε is, the higher surviving rate during learning process is. The surviving rate for Learning with ε=0 is the highest(1728/2000=86.4%) during test process while that for ε=0.1 is the
+lowest(779/1000=77.9%). From cumulative reward's perspective, greedy method still has the best learning performance, keeping cumulative reward between 2000 and 4000 constantly as shown in Figure 11. We can also find that the smaller ε is, the higher the initial cumulative reward corresponding to surviving rate during learning process is, which is not difficult to understand considering the smaller ε gives my robot fewer opportunities to explore other potential better actions and also fewer chances to incur penalties. As is seen from Figure 11, cumulative reward for all of them converges to between 2000 and 4000. ε-greedy method does not show better learning performance in terms of convergence compared to the greedy method here. This is easy to explain when
+we consider that my robot has only three actions and in most cases the pendulum movement is the optimal action. Consequently my robot does not have to explore other potential better actions.
 
-Run the imported project by “right-clicking” on the new project and selecting “Run As -> Run on Server. <br>
+![](https://github.com/gaojiaxi/SmartTank/blob/master/demoPictures/figure10_0.jpg)
+![](https://github.com/gaojiaxi/SmartTank/blob/master/demoPictures/figure10_1.jpg)
+![](https://github.com/gaojiaxi/SmartTank/blob/master/demoPictures/figure11.jpg)
 
 
-## Screenshots
-logic/high level structure of this project
-![](https://github.com/gaojiaxi/SmartEvent/tree/master/demoPictures/highLevelStructure.jpg)
-nearby page
-![](https://github.com/gaojiaxi/SmartEvent/tree/master/demoPictures/nearby.jpg)
-favorite page
-![](https://github.com/gaojiaxi/SmartEvent/tree/master/demoPictures/favorite.jpg)
-recommendation page
-![](https://github.com/gaojiaxi/SmartEvent/tree/master/demoPictures/recommendation.jpg)
-
-
-## Todo list
-1. The login system
-2. The registration system.
-3. Booting front page using AugularJS or React.
-
-## Deployment
-Deployment Environment: Amazon EC2 <br>
-(Please contact me at jiaxig@ece.ubc.ca if any issue happend)
-
-## Change Log
-v1.0.0(11/02/2019)<br>
-* user can see nearby events based on their geo-location
-* user can like/unlike events by clicking the 'Heart' symbol on front page.
-* System will recommend events to user based on users liked events and geo-location.
-
+## Part3(To be continued)
