@@ -170,6 +170,11 @@ public class Backpropagation implements NeuralNetInterface {
 		// TODO Auto-generated method stub
 		
 	}
+	@Override
+	public void save(String argFileName) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	

@@ -32,6 +32,8 @@ public interface LUTInterface extends CommonInterface{
 	 * @param X The state action vector used to index the LUT
 	 * @return The index where this vector maps to
 	 */
-	public int indexFor(double [] X); 
+	public int indexFor(double [] X);
+
+	public int indexFor(int[] X); 
 
 }// End of public interface LUT

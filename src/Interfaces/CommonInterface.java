@@ -43,4 +43,6 @@ import java.io.IOException;
  * @throws IOException
  */
  public void load(String argFileName) throws IOException;
+
+ public void save(String argFileName);
  }
