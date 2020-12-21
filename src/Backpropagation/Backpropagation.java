@@ -6,17 +6,17 @@ import java.io.IOException;
 import Interfaces.NeuralNetInterface;
 public class Backpropagation implements NeuralNetInterface {
 	
-	private int argNumInputs;
-	private int argNumHidden;
-	private double argLearningRate;
-	private double argMomentumTerm;
-	private double argA;
-	private double argB;
-	private double[] argWeightsHiddenToOutput;
-	private double[][] argWeightsInputToHidden;
-	private double[] argWeightsChangeHiddenToOutput;
-	private double[][] argWeightsChangeInputToHidden;
-	private double[] hiddenOutputs;
+	int argNumInputs;
+	int argNumHidden;
+	double argLearningRate;
+	double argMomentumTerm;
+	double argA;
+	double argB;
+	double[] argWeightsHiddenToOutput;
+	double[][] argWeightsInputToHidden;
+	double[] argWeightsChangeHiddenToOutput;
+	double[][] argWeightsChangeInputToHidden;
+	double[] hiddenOutputs;
 	
 	
 	public Backpropagation(
